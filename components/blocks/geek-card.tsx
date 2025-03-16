@@ -18,7 +18,7 @@ interface GeekCardProps {
 function getYouTubeThumbnail(url: string | undefined) {
   if (!url) return '';
   const videoId = url.split('/').pop()?.split('?')[0];
-  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg?t=${Date.now()}`;
 }
 
 export function GeekCard({ post }: GeekCardProps) {
