@@ -19,7 +19,7 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
-        serif: ['var(--font-lexend)'],
+        serif: ['ui-serif', 'Georgia', 'serif'],
       },
       boxShadow: {
         'custom': '15px 15px 30px #bebebe, -15px -15px 30px #ffffff',
