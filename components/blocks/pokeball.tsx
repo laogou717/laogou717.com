@@ -5,7 +5,7 @@ import { useCallback } from "react";
 export function Pokeball() {
   const handleClick = useCallback(async () => {
     try {
-      const module = await import("https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.mjs");
+      const module = await import("canvas-confetti");
       const confetti = module.default;
       confetti({
         particleCount: 80,
