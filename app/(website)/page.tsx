@@ -3,6 +3,7 @@ import { Container } from "@/components/blocks/container";
 import { GitHubIcon, XIcon, BilibiliIcon, QQIcon, YouTubeIcon } from "@/components/blocks/social-icons";
 import { SocialLink } from "@/components/blocks/social-link";
 import { ProjectCard } from "@/components/blocks/project-card";
+import { Pokeball } from "@/components/blocks/pokeball";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -131,6 +132,8 @@ export default function Readme() {
           ))}
         </div>
       </Container>
+
+      <Pokeball />
     </>
   );
-} 
+}
