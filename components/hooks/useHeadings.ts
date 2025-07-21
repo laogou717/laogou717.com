@@ -100,7 +100,6 @@ export function useHeadings() {
         return el;
       });
       const headingTree = buildHeadingTree(elements);
-      console.log('Detected headings:', headingTree);
       setHeadings(headingTree);
       observer = new IntersectionObserver((entries) => updateActiveHeading(entries, headingTree), {
         rootMargin: "-20% 0% -35% 0%",
@@ -128,7 +127,7 @@ export function useHeadings() {
       if (mutationObserver) mutationObserver.disconnect();
       if (retryTimeout) clearTimeout(retryTimeout);
     };
-  }, [findParentHeading, findCurrentHeading, activeId]);
+  }, [findParentHeading, findCurrentHeading]);
 
   return { headings, activeId, expandedSections };
 } 
