@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
-import { Lexend } from "next/font/google";
 import { headers } from 'next/headers';
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -15,10 +14,6 @@ import { cn } from "@/lib/utils";
 import { Toaster } from 'sonner';
 import { PerformanceMonitorWrapper } from "@/components/client-wrappers/performance-monitor-wrapper";
 
-const LexendFont = Lexend({
-  subsets: ["latin"],
-  variable: "--font-lexend",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.laogou717.com"),
@@ -75,7 +70,7 @@ export default async function RootLayout({
   return (
     <html
       lang="zh-CN"
-      className={`${GeistSans.variable} ${GeistMono.variable} ${LexendFont.variable}`}
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
       suppressHydrationWarning
     >
       <head>
